@@ -103,6 +103,8 @@ jobs:
           name: BuildAndroid
           path: build/android
   deployPages:
+    permissions: 
+      contents: write
     needs: buildWebGL
     name: Deploy to Github Pages 🚀
     runs-on: ubuntu-latest
