@@ -3,8 +3,8 @@ name: Actions 😎
 on: [push, pull_request]
 
 jobs:
-  buildWebGL:
-    name: Build on WebGL 🖥️
+  runTest:
+    name: Run Tests ☝️🤓
     runs-on: ubuntu-latest
     steps:
       # Checkout
@@ -28,6 +28,24 @@ jobs:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+  buildWebGL:
+    name: Build on WebGL 🖥️
+    needs: runTest
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      # Cache
+      - uses: actions/cache@v3
+        with:
+          path: Library
+          key: Library-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
+          restore-keys: |
+            Library-
 
       # Build
       - name: Build project
@@ -38,7 +56,6 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           targetPlatform: WebGL
-          allowDirtyBuild: true
 
       # Output
       - uses: actions/upload-artifact@v3
@@ -47,6 +64,7 @@ jobs:
           path: build/WebGL
   buildWindows:
     name: Build on Windows 🪟
+    needs: runTest
     runs-on: ubuntu-latest
     steps:
       # Checkout
@@ -80,6 +98,7 @@ jobs:
           path: build/windows
   buildAndroid:
     name: Build on Android 👽
+    needs: runTest
     runs-on: ubuntu-latest
     steps:
       # Checkout
