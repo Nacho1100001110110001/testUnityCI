@@ -6,11 +6,7 @@ Este proyecto muestra una pequeña prueba sobre la implementación de la filosof
 
 ## Proceso
 
-Mediante el uso de 
-<a href="https://github.com/game-ci/unity-actions" taget="_blank">
-  Game CI GitHub Actions
-</a>
- se ha logrado automatizar el proceso DevOps para un proyecto de Unity.
+Mediante el uso de [Game CI GitHub Actions](https://github.com/game-ci/unity-actions) se ha logrado automatizar el proceso DevOps para un proyecto de Unity.
 
 El flujo comienza con la creación de un requerimiento, el cual se desarrollará en el editor de Unity, posteriormente este trabajo se subirá al repositorio del proyecto, en el cual se activarán las GitHub Actions que se encargarán de realizar la build del proyecto, correr los testeos necesarios y, si todo sale bien, desplegar el resultado en una página de GitHub Pages.
 
