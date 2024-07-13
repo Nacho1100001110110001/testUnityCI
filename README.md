@@ -28,8 +28,6 @@ De esta manera los cambios hechos en desarrollo se pueden observar automáticame
 
 ## 🔗 Links
 
-[![linkedin](https://upload.wikimedia.org/wikipedia/commons/1/19/LinkedIn_logo.svg)](https://www.linkedin.com/in/ignacio-rivas-urra-91074814a/)
-
 <a href="https://www.linkedin.com/in/ignacio-rivas-urra-91074814a/">
   <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LinkedIn_logo.svg" alt="Descripción de la imagen" height="50"/>
 </a>
