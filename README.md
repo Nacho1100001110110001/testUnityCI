@@ -16,7 +16,7 @@ De esta manera los cambios hechos en desarrollo se pueden observar automáticame
 
 ## Stack Utilizado
 
-![DevOps Stack](https://i.ibb.co/0Kwr6B0/Dev-Ops-Stack.png)
+![DevOps Stack](https://i.ibb.co/8sk5P4g/Dev-Ops-Stack.png)
 
 1. Plan: Trello
 2. Code: GitHub para versionamiento / Visual Studio para IDE
